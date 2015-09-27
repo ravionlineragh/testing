@@ -1,7 +1,7 @@
 <project name="testing" default="chkHere" basedir=".">
-<echo> this is a test build.xml</echo>
+<description> this is a test build xml</description>
 
 <target name="chkHere">
-  <echo>Inside the chkhere of the build.xml</echo>
+  <echo>Inside the chkhere of the buildxml</echo>
 </target>
 </project>
