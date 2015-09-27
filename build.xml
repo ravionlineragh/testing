@@ -1,0 +1,3 @@
+<project>
+<echo> this is a test build.xml</echo>
+</project>
