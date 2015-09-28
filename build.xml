@@ -1,9 +1,9 @@
 <project name="testing" default="chkHere" basedir=".">
 <description> this is a test build xml</description>
 
-<target name="chkHere">
+<target name="chkHere" depends="makejar">
   <echo>Inside the chkhere of the buildxml</echo>
-  <antcall target="makejar"></antcall>
+ 
 </target>
 
 <target name="clean">
@@ -14,10 +14,12 @@
 </target>
 
 <target name="compile" depends="clean">
+  <echo>Inside the compile of the buildxml</echo>
   <javac srcdir="src" destdir="build/classes"></javac>
 </target>
 
 <target name="makejar" depends="compile">
+  <echo>Inside the makejar of the buildxml</echo>
   <jar destfile="build/jar/test.jar" basedir="build/classes">
     <manifest>
       <attribute name="Main-Class" value="com.test.testing"></attribute>
