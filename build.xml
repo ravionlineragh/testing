@@ -9,8 +9,8 @@
 <target name="clean">
   <echo>Inside the clean of the buildxml</echo>
   <delete dir="build" />
-  <mkdir dir="build/classes" /></mkdir>
-  <mkdir dir="build/jar" /></mkdir>
+  <mkdir dir="build/classes" />
+  <mkdir dir="build/jar" />
 </target>
 
 <target name="compile" depends="clean">
