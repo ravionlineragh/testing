@@ -3,5 +3,27 @@
 
 <target name="chkHere">
   <echo>Inside the chkhere of the buildxml</echo>
+  <antcall target="makejar"></antcall>
 </target>
+
+<target name="clean">
+  <echo>Inside the clean of the buildxml</echo>
+  <delete dir="build" />
+  <mkdir dir="build/classes" /></mkdir>
+  <mkdir dir="build/jar" /></mkdir>
+</target>
+
+<target name="compile" depends="clean">
+  <javac srcdir="src" destdir="build/classes"></javac>
+</target>
+
+<target name="makejar" depends="compile">
+  <jar destfile="build/jar/test.jar" basedir="build/classes">
+    <manifest>
+      <attribute name="Main-Class" value="com.test.testing"
+    </manifest>
+  </jar>
+  
+</target>
+
 </project>
