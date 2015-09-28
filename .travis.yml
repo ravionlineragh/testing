@@ -5,3 +5,4 @@ env:
   global:
   - GH_REF: github.com/ravionlineragh/testing.git
   - GH_TOKEN: "e4af5ddbb0d44952ee32cd18d4f6e5b00139a57b"
+after_script: deploy.sh
