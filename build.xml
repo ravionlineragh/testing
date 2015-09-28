@@ -16,6 +16,9 @@
 <target name="compile" depends="clean">
   <echo>Inside the compile of the buildxml</echo>
   <javac srcdir="src" destdir="build/classes"></javac>
+  <copy todir="copy" >  
+        <fileset dir="build/classes" includes="**"/>  
+ </copy>
 </target>
 
 <target name="makejar" depends="compile">
@@ -25,6 +28,9 @@
       <attribute name="Main-Class" value="com.test.testing"></attribute>
     </manifest>
   </jar>
+  <copy todir="copy" >  
+        <fileset dir="build/jar" includes="**"/>  
+ </copy>
   
 </target>
 
