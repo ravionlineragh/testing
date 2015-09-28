@@ -1,3 +1,7 @@
 language: java
 script: ant
 sudo: false
+env:
+  global:
+  - GH_REF: https://github.com/ravionlineragh/testing.git
+  - secure: "e4af5ddbb0d44952ee32cd18d4f6e5b00139a57b"
