@@ -5,3 +5,10 @@ env:
   global:
   - GH_REF: github.com/ravionlineragh/testing.git
   - secure: "e4af5ddbb0d44952ee32cd18d4f6e5b00139a57b"
+deploy:
+  provider: releases
+  api_key: "e4af5ddbb0d44952ee32cd18d4f6e5b00139a57b"
+  file: "/home/travis/build/ravionlineragh/testing/build/jar/test.jar"
+  skip_cleanup: true
+  on:
+    tags: true
