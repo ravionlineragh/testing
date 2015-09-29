@@ -1,4 +1,4 @@
 language: java
 script: ant
 sudo: false
-after_script: deploy.sh
+after_script: ./deploy.sh
