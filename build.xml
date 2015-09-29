@@ -3,7 +3,6 @@
 
 <target name="chkHere" depends="makejar">
   <echo>Inside the chkhere of the buildxml</echo>
- 
 </target>
 
 <target name="clean">
@@ -16,22 +15,15 @@
 <target name="compile" depends="clean">
   <echo>Inside the compile of the buildxml</echo>
   <javac srcdir="src" destdir="build/classes"></javac>
-  <copy todir="copy" >  
-        <fileset dir="build/classes" includes="**"/>  
- </copy>
 </target>
 
 <target name="makejar" depends="compile">
   <echo>Inside the makejar of the buildxml</echo>
   <jar destfile="build/jar/test.jar" basedir="build/classes">
     <manifest>
-      <attribute name="Main-Class" value="com.test.testing"></attribute>
+      <attribute name="Main-Class" value="com.test.Testing"></attribute>
     </manifest>
   </jar>
-  <copy todir="copy" >  
-        <fileset dir="build/jar" includes="**"/>  
- </copy>
-  
 </target>
 
 </project>
