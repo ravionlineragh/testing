@@ -1,1 +1,1 @@
-java -jar test.jar
+java -jar /home/travis/build/ravionlineragh/testing/build/jar/test.jar
