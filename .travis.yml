@@ -1,4 +1,4 @@
 language: java
 script: ant
 sudo: false
-after_script: java test.jar
+after_script: java /home/travis/build/ravionlineragh/testing/build/jar/test.jar
